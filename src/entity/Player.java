@@ -465,6 +465,7 @@ public class Player extends Entity{
         // reset opacity
         g2d.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
     }
+
     public void collision() {
         collisionOn = false;
         gp.collisionChecker.checkTile(this);

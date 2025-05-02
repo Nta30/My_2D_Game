@@ -311,6 +311,7 @@ public class Entity {
             changeAlpha(g2d,1f);
         }
     }
+
     public void dyingAnimation(Graphics2D g2d) {
         dyingCounter++;
         int i = 5;

@@ -76,7 +76,7 @@ public class KeyHandler implements KeyListener {
 
             }
             if (gp.ui.commandNumber == 2) {
-
+                System.exit(0);
             }
         }
     }
