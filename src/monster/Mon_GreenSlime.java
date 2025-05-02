@@ -70,8 +70,8 @@ public class Mon_GreenSlime extends Entity {
             }
             actionLockCounter = 0;
         }
-        int i = new Random().nextInt(100) + 1;
-        if(i > 99 && !projectile.alive && shootAvailableCounter == 30){
+        int i = new Random().nextInt(150) + 1;
+        if(i > 149 && !projectile.alive && shootAvailableCounter == 30){
             projectile.set(worldX, worldY, direction, true, this);
             gp.projectileList.add(projectile);
             shootAvailableCounter = 0;

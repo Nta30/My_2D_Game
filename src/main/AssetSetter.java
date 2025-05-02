@@ -4,6 +4,8 @@ import entity.Entity;
 import entity.NPC_Merchant;
 import entity.NPC_OldMan;
 import monster.Mon_GreenSlime;
+import monster.Mon_Orc;
+import monster.Mon_RedSlime;
 import object.*;
 import tile_interactive.IT_DryTree;
 import tile_interactive.InteractiveTile;
@@ -97,6 +99,35 @@ public class AssetSetter {
         gp.monster[mapNum][i] = new Mon_GreenSlime(gp);
         gp.monster[mapNum][i].worldX = gp.tileSize*35;
         gp.monster[mapNum][i].worldY = gp.tileSize*37;
+        i++;
+        gp.monster[mapNum][i] = new Mon_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*12;
+        gp.monster[mapNum][i].worldY = gp.tileSize*32;
+        i++;
+        gp.monster[mapNum][i] = new Mon_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*12;
+        gp.monster[mapNum][i].worldY = gp.tileSize*10;
+        i++;
+        gp.monster[mapNum][i] = new Mon_Orc(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*36;
+        gp.monster[mapNum][i].worldY = gp.tileSize*18;
+        i++;
+        gp.monster[mapNum][i] = new Mon_RedSlime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*27;
+        gp.monster[mapNum][i].worldY = gp.tileSize*37;
+        i++;
+        gp.monster[mapNum][i] = new Mon_RedSlime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*24;
+        gp.monster[mapNum][i].worldY = gp.tileSize*30;
+        i++;
+        gp.monster[mapNum][i] = new Mon_RedSlime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*20;
+        gp.monster[mapNum][i].worldY = gp.tileSize*41;
+        i++;
+        gp.monster[mapNum][i] = new Mon_RedSlime(gp);
+        gp.monster[mapNum][i].worldX = gp.tileSize*36;
+        gp.monster[mapNum][i].worldY = gp.tileSize*12;
+
     }
 
     public void setInteractiveTile() {
