@@ -123,8 +123,6 @@ public class TileManager {
                 ){
                     g2d.drawImage(tile[tileNumber].image, screenX, screenY,null);
                 }
-
-
             }
         }
     }

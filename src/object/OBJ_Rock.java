@@ -40,22 +40,4 @@ public class OBJ_Rock extends Projectile {
         Color color = new Color(40, 50, 30);
         return color;
     }
-
-    @Override
-    public int getParticleSize() {
-        int size = 10;
-        return size;
-    }
-
-    @Override
-    public int getParticleSpeed() {
-        int speed = 1;
-        return speed;
-    }
-
-    @Override
-    public int getParticleMaxLife() {
-        int maxLife = 20;
-        return maxLife;
-    }
 }

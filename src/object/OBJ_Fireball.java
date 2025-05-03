@@ -4,6 +4,8 @@ import entity.Entity;
 import entity.Projectile;
 import main.GamePanel;
 
+import java.awt.*;
+
 public class OBJ_Fireball extends Projectile {
 
     GamePanel gp;
@@ -21,6 +23,7 @@ public class OBJ_Fireball extends Projectile {
         alive = false;
         getImage();
     }
+
     public void getImage() {
         up1 = setup("/projectile/fireball_up_1", gp.tileSize, gp.tileSize);
         up2 = setup("/projectile/fireball_up_2", gp.tileSize, gp.tileSize);
@@ -39,6 +42,12 @@ public class OBJ_Fireball extends Projectile {
             haveResource = true;
         }
         return haveResource;
+    }
+
+    @Override
+    public Color getParticleColor() {
+        Color color = new Color(240, 50, 30);
+        return color;
     }
 
     @Override

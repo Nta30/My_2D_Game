@@ -179,97 +179,53 @@ public class UI {
 
     public void drawTitleScreen() {
 
-        if(titleScreenState == 0) {
-            g2d.setColor(new Color(0,0,0));
-            g2d.fillRect(0,0 ,gp.screenWidth,gp.screenHeight);
+        g2d.setColor(new Color(0,0,0));
+        g2d.fillRect(0,0 ,gp.screenWidth,gp.screenHeight);
 
-            // title name
-            g2d.setFont(g2d.getFont().deriveFont(Font.BOLD, 96)); // create new font based on current font
-            String text = "Blue Boy Adventure";
-            int x = getXForCenteredText(text);
-            int y = gp.tileSize*3;
+        // title name
+        g2d.setFont(g2d.getFont().deriveFont(Font.BOLD, 96)); // create new font based on current font
+        String text = "Blue Boy Adventure";
+        int x = getXForCenteredText(text);
+        int y = gp.tileSize*3;
 
-            // shadow
-            g2d.setColor(Color.gray);
-            g2d.drawString(text, x+5, y+5);
+        // shadow
+        g2d.setColor(Color.gray);
+        g2d.drawString(text, x+5, y+5);
 
-            // main text
-            g2d.setColor(Color.white);
-            g2d.drawString(text, x, y);
+        // main text
+        g2d.setColor(Color.white);
+        g2d.drawString(text, x, y);
 
-            // character image
-            x = gp.screenWidth/2 - (gp.tileSize*2)/2;
-            y += gp.tileSize*2;
-            g2d.drawImage(gp.player.down1, x, y, gp.tileSize*2, gp.tileSize*2, null);
+        // character image
+        x = gp.screenWidth/2 - (gp.tileSize*2)/2;
+        y += gp.tileSize*2;
+        g2d.drawImage(gp.player.down1, x, y, gp.tileSize*2, gp.tileSize*2, null);
 
-            // menu
-            g2d.setFont(g2d.getFont().deriveFont(Font.BOLD, 48));
+        // menu
+        g2d.setFont(g2d.getFont().deriveFont(Font.BOLD, 48));
 
-            text = "NEW GAME";
-            x = getXForCenteredText(text);
-            y += gp.tileSize*3.5;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 0) {
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
+        text = "NEW GAME";
+        x = getXForCenteredText(text);
+        y += gp.tileSize*3.5;
+        g2d.drawString(text, x, y);
+        if(commandNumber == 0) {
+            g2d.drawString(">", x-gp.tileSize, y);
+        }
 
-            text = "LOAD GAME";
-            x = getXForCenteredText(text);
-            y += gp.tileSize;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 1) {
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
+        text = "LOAD GAME";
+        x = getXForCenteredText(text);
+        y += gp.tileSize;
+        g2d.drawString(text, x, y);
+        if(commandNumber == 1) {
+            g2d.drawString(">", x-gp.tileSize, y);
+        }
 
-            text = "QUIT";
-            x = getXForCenteredText(text);
-            y += gp.tileSize;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 2) {
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
-        }else if(titleScreenState == 1) {
-            // class selection screen
-            g2d.setColor(Color.white);
-            g2d.setFont(g2d.getFont().deriveFont(Font.PLAIN, 48));
-
-            String text = "Select your class!";
-            int x = getXForCenteredText(text);
-            int y = gp.tileSize*3;
-            g2d.drawString(text, x, y);
-
-            text = "Fighter";
-            x = getXForCenteredText(text);
-            y += gp.tileSize*3;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 0){
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
-
-            text = "Thief";
-            x = getXForCenteredText(text);
-            y += gp.tileSize;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 1){
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
-
-            text = "Sorcerer";
-            x = getXForCenteredText(text);
-            y += gp.tileSize;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 2){
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
-
-            text = "Back";
-            x = getXForCenteredText(text);
-            y += gp.tileSize*2;
-            g2d.drawString(text, x, y);
-            if(commandNumber == 3){
-                g2d.drawString(">", x-gp.tileSize, y);
-            }
-
+        text = "QUIT";
+        x = getXForCenteredText(text);
+        y += gp.tileSize;
+        g2d.drawString(text, x, y);
+        if(commandNumber == 2) {
+            g2d.drawString(">", x-gp.tileSize, y);
         }
     }
 
@@ -300,6 +256,7 @@ public class UI {
     }
 
     public void drawCharacterScreen() {
+
         // create a frame
         final int frameX = gp.tileSize;
         final int frameY = gp.tileSize;

@@ -70,9 +70,8 @@ public class Projectile extends Entity{
     public void subTractResource(Entity user) {
     }
 
-    @Override
-    public Color getParticleColor() {
-        Color color = new Color(240, 50, 30);
+    public Color setParticleColor() {
+        Color color = null;
         return color;
     }
 

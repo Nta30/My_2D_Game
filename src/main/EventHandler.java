@@ -81,6 +81,7 @@ public class EventHandler {
         }
         return hit;
     }
+
     public void damagePit(int gameState) {
         gp.gameState = gameState;
         gp.playSE(2);
@@ -88,6 +89,7 @@ public class EventHandler {
         gp.player.life -= 1;
         canTouchEvent = false;
     }
+
     public void healingPool(int gameState) {
 
         if(gp.keyHandler.enterPressed){
@@ -100,12 +102,6 @@ public class EventHandler {
             gp.assetSetter.setMonster();
         }
     }
-//    public void teleport(int gameState) {
-//        gp.gameState = gameState;
-//        gp.ui.currentDialogue = "What the hell??";
-//        gp.player.worldX = gp.tileSize*37;
-//        gp.player.worldY = gp.tileSize*10;
-//    }
 
     public void teleport(int map, int col, int row) {
         gp.gameState = gp.transitionState;
